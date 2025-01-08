@@ -21,7 +21,7 @@ jobs:
           cache: gradle
 
       - name: Make gradlew executable
-        run: chmod _x ./gradlew
+        run: chmod -x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew clean build
