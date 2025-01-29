@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/deployment
 
 jobs:
   build:
@@ -105,7 +106,7 @@ jobs:
         run: kubectl get nodes
       - name: Deploy the image to minikube
         run: |
-          docker pull MunHaxx/spring-rag:latest
+          docker pull ${{ secrets.DOCKER_USERNAME }}/spring-rag:latest
           kubectl apply -f src/main/k8s/deployment.yml
       - name: Get Kubernetes service URL
         run: |
