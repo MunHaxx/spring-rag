@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AssitantResource {
+public class AssistantResource {
     private final AssistantAiService assistantAiService;
 
-    AssitantResource(AssistantAiService assistantAiService) {
+    AssistantResource(AssistantAiService assistantAiService) {
         this.assistantAiService = assistantAiService;
     }
 
